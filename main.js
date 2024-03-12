@@ -5,24 +5,16 @@ const createCategory = () => {
   let data = document.createElement("input");
   data.type = "date";
   let textArea = document.createElement("textArea");
-  let done = document.createElement("button");
-  let notDone = document.createElement("button");
 
   div.className = "newCategory";
   input.className = "categoryTitle";
   input.placeholder = "Stuff Title";
   data.className = "categoryFinish";
   textArea.className = "categoryContent";
-  notDone.className = "categorynotDone";
-  notDone.innerHTML = "Stuff Unfinished";
-  done.className = "categoryDone";
-  done.innerHTML = "Stuff Finished";
 
   div.appendChild(input);
   div.appendChild(data);
   div.appendChild(textArea);
-  div.appendChild(notDone);
-  div.appendChild(done);
   main.appendChild(div);
 };
 
@@ -57,8 +49,6 @@ const loadStuff = () => {
     let data = document.createElement("input");
     data.type = "date";
     let textArea = document.createElement("textArea");
-    let done = document.createElement("button");
-    let notDone = document.createElement("button");
 
     div.className = "newCategory";
     input.className = "categoryTitle";
@@ -68,16 +58,10 @@ const loadStuff = () => {
     data.value = myStuff[i].data;
     textArea.className = "categoryContent";
     textArea.value = myStuff[i].content;
-    notDone.className = "categorynotDone";
-    notDone.innerHTML = "Stuff Unfinished";
-    done.className = "categoryDone";
-    done.innerHTML = "Stuff Finished";
 
     div.appendChild(input);
     div.appendChild(data);
     div.appendChild(textArea);
-    div.appendChild(notDone);
-    div.appendChild(done);
     main.appendChild(div);
   }
 };
